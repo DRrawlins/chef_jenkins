@@ -1,0 +1,5 @@
+Version 0.1.0
+ - initial commit of working kitchen ecosystem, very basic recipes and linting, as well as dependency setup
+ - added some inspec tests, and gitignore
+ - added Readme, initial commit
+
