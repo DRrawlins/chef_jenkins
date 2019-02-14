@@ -1,0 +1,80 @@
+# Put files/directories that should be ignored in this file when uploading
+
+# OS generated files #
+#--------------------#
+.DS_Store
+Icon?
+nohup.out
+
+# EDITORS #
+#---------#
+\#*
+.#*
+*~
+*.sw[a-z]
+*.bak
+REVISION
+TAGS*
+tmtags
+*_flymake.*
+*_flymake
+*.tmproj
+.project
+.settings
+mkmf.log
+
+# COMPILED #
+#----------#
+a.out
+*.o
+*.pyc
+*.so
+*.com
+*.class
+*.dll
+*.exe
+*/rdoc/
+
+# Testing #
+#---------#
+.watchr
+.rspec
+spec/*
+spec/fixtures/*
+test/*
+.kitchen*
+.rubocop.yml
+spec/*
+Rakefile
+.foodcritic
+
+# VCS #
+#-----#
+.git
+*/.git
+.gitignore
+.gitmodules
+.gitconfig
+.gitattributes
+
+# Berkshelf #
+#-----------#
+Berksfile
+Berksfile.lock
+vendor/*
+tmp
+
+# Policyfile #
+#------------#
+Policyfile.rb
+Policyfile.lock.json
+
+# Cookbooks #
+#-----------#
+VERSION*
+CHANGES*
+
+# Vagrant #
+#---------#
+.vagrant
+Vagrantfile

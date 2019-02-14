@@ -1,0 +1,57 @@
+---
+driver:
+  name: vagrant
+  provider: virtualbox
+  provision: true
+
+provisioner:
+  #name: chef_zero_nodes
+  name: chef_zero
+  product_name: chef
+  install_strategy: once
+  nodes_path: test/integration/nodes
+
+platforms:
+  - name: fedora-29-cloud
+    provisioner:
+      # Need to explicitly set chef_client_path because chef_omnibus would have prepended /opt/chef
+      chef_client_path: '/opt/chef/bin/chef-client'
+
+suites:
+  - name: jenkins_master
+    driver:
+      gui: false
+      box: fedora/29-cloud-base
+      box_check_update: true
+      box_version: 29.20181024.1
+      communicator: ssh
+      guest: fedora
+      ssh:
+        insert_key: false
+      vagrantfiles:
+        - ./vagrantfiles/fedora.rb
+      customize:
+        cpus: 1
+        memory: 1024
+        natdnshostresolver1: 'on'
+        natdnsproxy1: 'on'
+        usb: 'off'
+      network:
+        - ['forwarded_port', {guest: 22, host: 2200, id: 'ssh', auto_correct: true }]
+        - ['forwarded_port', {guest: 8080, host: 9090, id: 'http', auto_correct: true }]
+    data_bags_path: "test/smoke/data_bags"
+    run_list:
+      - recipe[chef_jenkins::default]
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+    attributes:
+      chef_client:
+        config:
+          log_level: ":debug"
+      jenkins:
+        master:
+verifier:
+  name: inspec
+  sudo: true
+...
