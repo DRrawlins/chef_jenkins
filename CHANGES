@@ -1,3 +1,7 @@
+Version 0.3.0:
+ - metadata bump
+ - made some quality of life improvements as well as jenkins fully functioning on boot now
+
 Version 0.2.1:
  - metadata bump before tag
  - had some issues with initial jenkins setup, this file helps with that
