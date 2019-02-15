@@ -4,7 +4,7 @@ maintainer_email 'danrawlins07@gmail.com'
 license          'MIT'
 description 'Installs/Configures chef_jenkins'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '0.2.0'
+version '0.2.1'
 
 %w{fedora}.each do |os|
   supports os
