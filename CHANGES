@@ -1,3 +1,11 @@
+Version 0.2.0:
+ - added in jenkins repo for rhel based oses
+ - added default recipe that will source other recipes
+ - setup template for future dynamics, but only really changing one option for now
+ - added in some needed attributes for dynamic modification where needed
+ - fixed some foodcritic issues with metdata and added some more dependencies in gemfile
+ - added dependency install to readme
+
 Version 0.1.0
  - initial commit of working kitchen ecosystem, very basic recipes and linting, as well as dependency setup
  - added some inspec tests, and gitignore
