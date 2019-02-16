@@ -1,21 +1,29 @@
 require 'chefspec'
 require 'chefspec/berkshelf'
-require 'chef-vault'
+
+# Require all our libraries
+Dir['libraries/*.rb'].each { |f| require File.expand_path(f) }
 
 RSpec.configure do |config|
-  config.color = true               # Use color in STDOUT
-  config.formatter = :documentation # Use the specified formatter
+  config.log_level = :fatal
 
-  # Added ChefSpec caching gem to speed up tests 10x
-  config.extend(ChefSpec::Cacher)
+  # Use color in STDOUT
+  config.color = true
 
-  # config.log_level = :debug
-end
+  # Guard against people using deprecated RSpec syntax
+  config.raise_errors_for_deprecations!
 
-def linux_platforms
-  %w{fedora}
-end
+  # Use the specified formatter
+  config.formatter = :documentation
 
-def ubuntu_versions
-  %w{29}
+  # Why aren't these the defaults?
+  config.filter_run focus: true
+  config.run_all_when_everything_filtered = true
+
+  # Set a default platform (this is overridden as needed)
+  config.platform  = 'fedora'
+  config.version   = '29'
+
+  # Be random!
+  config.order = 'random'
 end
