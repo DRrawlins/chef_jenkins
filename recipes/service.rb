@@ -27,7 +27,7 @@ service 'jenkins_restart' do
 end
 
 file 'groovy_security' do
-  path      "#{groovy_init_sec_file}" # ~FC002
+  path      groovy_init_sec_file.to_s # ~FC002
   action    :nothing
   notifies :run, 'execute[admin_pass]', :delayed
 end
@@ -42,6 +42,6 @@ execute 'admin_pass' do
 end
 
 file 'admin_pass_file' do
-  path      "#{groovy_init_sec_file}" # ~FC002
+  path      admin_pass.to_s # ~FC002
   action    :nothing
 end
