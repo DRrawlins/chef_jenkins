@@ -11,4 +11,8 @@ In localdev its all the same.
 ```bash
 ./install-fed-dependencies.sh
 bundle exec kitchen conv
+bundle exec rspec spec
+bundle exec cookstyle .
+bundle exec cookstyle -a .
+bundle exec foodcritic .
 ```
