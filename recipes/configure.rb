@@ -1,3 +1,13 @@
+user node['chef_jenkins']['master']['user'] do
+  home node['chef_jenkins']['master']['home_dir']
+  action :create
+end
+
+group node['chef_jenkins']['master']['group'] do
+  members node['chef_jenkins']['master']['user']
+  action :create
+end
+
 directory node['chef_jenkins']['master']['home_dir'] do
   owner     node['chef_jenkins']['master']['user']
   group     node['chef_jenkins']['master']['group']
@@ -30,7 +40,7 @@ end
 groovy_init_dir = "#{node['chef_jenkins']['master']['home_dir']}/#{node['chef_jenkins']['master']['groovy_init']}"
 groovy_init_sec_file = "#{groovy_init_dir}/#{node['chef_jenkins']['master']['groovy_init_file']}"
 
-directory "#{groovy_init_dir}" do # ~FC002
+directory groovy_init_dir.to_s do # ~FC002
   owner     node['chef_jenkins']['master']['user']
   group     node['chef_jenkins']['master']['group']
   mode      '0755'
@@ -42,7 +52,7 @@ cookbook_file 'groovy_security' do
   owner     node['chef_jenkins']['master']['user']
   group     node['chef_jenkins']['master']['group']
   mode      '0755'
-  path      "#{groovy_init_sec_file}" # ~FC002
+  path      groovy_init_sec_file.to_s # ~FC002
   action    :nothing
 end
 
