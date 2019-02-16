@@ -1,3 +1,17 @@
+Version 0.4.0:
+ - metadata bump
+ - moved spec file and added different style of testing
+ - fixed ruby linting issues
+ - fixed up spec help
+ - cookstyle fixes
+ - fixed spacing
+ - fixed typo and added user and group creation
+ - deleted example library function
+ - changed java version
+ - added some example commands to README
+ - added chefspec to Gemfile
+ - beefed up the kitchen box
+
 Version 0.3.1:
  - metadata bump
  - small readme changes
