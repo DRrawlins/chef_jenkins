@@ -22,7 +22,7 @@ suites:
     driver:
       gui: false
       box: fedora/29-cloud-base
-      box_check_update: true
+      box_check_update: false
       box_version: 29.20181024.1
       communicator: ssh
       guest: fedora
@@ -31,8 +31,8 @@ suites:
       vagrantfiles:
         - ./vagrantfiles/fedora.rb
       customize:
-        cpus: 1
-        memory: 1024
+        cpus: 2
+        memory: 4096
         natdnshostresolver1: 'on'
         natdnsproxy1: 'on'
         usb: 'off'
