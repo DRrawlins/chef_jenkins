@@ -2,6 +2,6 @@
 # Recipe:: default
 
 include_recipe 'chef_jenkins::jenkins_repo'
-include_recipe 'chef_jenkins::install'
-include_recipe 'chef_jenkins::configure'
-include_recipe 'chef_jenkins::service'
+include_recipe 'chef_jenkins::install_jenkins'
+include_recipe 'chef_jenkins::configure_jenkins'
+include_recipe 'chef_jenkins::jenkins_service'

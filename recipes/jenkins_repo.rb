@@ -1,7 +1,7 @@
 yum_repository 'jenkins_repo' do
   name            node['chef_jenkins']['master']['jenkins_repo_package_name'] # ~FC120
   clean_metadata  true
-  clean_headers true
+  clean_headers   true
   description     node['chef_jenkins']['master']['jenkins_repo_package_desc']
   baseurl         node['chef_jenkins']['master']['jenkins_repo_package_base_url']
   enabled         true
