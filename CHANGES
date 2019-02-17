@@ -1,3 +1,78 @@
+Version 0.4.1:
+ - added inspec tests
+ - moved spec file
+ - moved attributes and recipes
+ - Version bump to 0.4.0
+ - Version bump to 0.4.0
+ - metadata bump
+ - metadata bump
+ - moved spec file and added different style of testing
+ - moved spec file and added different style of testing
+ - fixed ruby linting issues
+ - fixed ruby linting issues
+ - fixed up spec help
+ - fixed up spec help
+ - cookstyle fixes
+ - cookstyle fixes
+ - fixed spacing
+ - fixed spacing
+ - fixed typo and added user and group creation
+ - fixed typo and added user and group creation
+ - deleted example library function
+ - deleted example library function
+ - changed java version
+ - changed java version
+ - added some example commands to README
+ - added some example commands to README
+ - added chefspec to Gemfile
+ - added chefspec to Gemfile
+ - beefed up the kitchen box
+ - beefed up the kitchen box
+ - Version bump to 0.3.1
+ - Version bump to 0.3.1
+ - metadata bump
+ - metadata bump
+ - small readme changes
+ - small readme changes
+ - Version bump to 0.3.0
+ - Version bump to 0.3.0
+ - metadata bump
+ - metadata bump
+ - made some quality of life improvements as well as jenkins fully functioning on boot now
+ - made some quality of life improvements as well as jenkins fully functioning on boot now
+ - Version bump to 0.2.1
+ - Version bump to 0.2.1
+ - metadata bump before tag
+ - metadata bump before tag
+ - had some issues with initial jenkins setup, this file helps with that
+ - had some issues with initial jenkins setup, this file helps with that
+ - added installing java to install recipe
+ - added installing java to install recipe
+ - metadata bump
+ - metadata bump
+ - Version bump to 0.2.0
+ - Version bump to 0.2.0
+ - added in jenkins repo for rhel based oses
+ - added in jenkins repo for rhel based oses
+ - added default recipe that will source other recipes
+ - added default recipe that will source other recipes
+ - setup template for future dynamics, but only really changing one option for now
+ - setup template for future dynamics, but only really changing one option for now
+ - added in some needed attributes for dynamic modification where needed
+ - added in some needed attributes for dynamic modification where needed
+ - fixed some foodcritic issues with metdata and added some more dependencies in gemfile
+ - fixed some foodcritic issues with metdata and added some more dependencies in gemfile
+ - added dependency install to readme
+ - added dependency install to readme
+ - Added VERSION and CHANGES files, Version bump to v0.1.0
+ - Added VERSION and CHANGES files, Version bump to v0.1.0
+ - initial commit of working kitchen ecosystem, very basic recipes and linting, as well as dependency setup
+ - initial commit of working kitchen ecosystem, very basic recipes and linting, as well as dependency setup
+ - added some inspec tests, and gitignore
+ - added some inspec tests, and gitignore
+ - added Readme, initial commit
+ - added Readme, initial commit
+
 Version 0.4.0:
  - metadata bump
  - moved spec file and added different style of testing
