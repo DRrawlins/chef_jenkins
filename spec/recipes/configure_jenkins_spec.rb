@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'chef_jenkins::configure' do
+describe 'chef_jenkins::configure_jenkins' do
   context 'default' do
     let(:home_dir) { '/var/lib/jenkins' }
     let(:log_dir)  { '/var/log/jenkins' }
